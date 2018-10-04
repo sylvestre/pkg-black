@@ -1,0 +1,77 @@
+Description: Remove privacy-breach links and self-host docs
+ Remove tracking URLs from the README and sidebar of pages
+ in the documentation.
+ Also add the local source code to the doc generation page
+ to avoid needing the package installed to rebuild.
+Author: Neil Williams <codehelp@debian.org>
+---
+
+--- black-18.6b4.orig/README.md
++++ black-18.6b4/README.md
+@@ -2,13 +2,10 @@
+ <h2 align="center">The Uncompromising Code Formatter</h2>
+ 
+ <p align="center">
+-<a href="https://travis-ci.org/ambv/black"><img alt="Build Status" src="https://travis-ci.org/ambv/black.svg?branch=master"></a>
+ <a href="https://black.readthedocs.io/en/stable/?badge=stable"><img alt="Documentation Status" src="https://readthedocs.org/projects/black/badge/?version=stable"></a>
+-<a href="https://coveralls.io/github/ambv/black?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/github/ambv/black/badge.svg?branch=master"></a>
+ <a href="https://github.com/ambv/black/blob/master/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
+ <a href="https://pypi.org/project/black/"><img alt="PyPI" src="https://black.readthedocs.io/en/stable/_static/pypi.svg"></a>
+ <a href="https://pepy.tech/project/black"><img alt="Downloads" src="https://pepy.tech/badge/black"></a>
+-<a href="https://github.com/ambv/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+ </p>
+ 
+ > “Any color you like.”
+@@ -883,18 +880,11 @@ and [`pipenv`](https://docs.pipenv.org/)
+ 
+ Use the badge in your project's README.md:
+ 
+-```markdown
+-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+-```
++ https://img.shields.io/badge/code%20style-black-000000.svg
+ 
+ Using the badge in README.rst:
+-```
+-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+-    :target: https://github.com/ambv/black
+-```
+-
+-Looks like this: [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+ 
++ https://img.shields.io/badge/code%20style-black-000000.svg
+ 
+ ## License
+ 
+--- black-18.6b4.orig/docs/conf.py
++++ black-18.6b4/docs/conf.py
+@@ -12,6 +12,11 @@
+ # add these directories to sys.path here. If the directory is relative to the
+ # documentation root, use os.path.abspath to make it absolute, like shown here.
+ #
++import os
++import sys
++
++sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..')))
++
+ import ast
+ from pathlib import Path
+ import re
+@@ -160,14 +165,14 @@ html_sidebars = {
+ html_theme_options = {
+     "show_related": False,
+     "description": "“Any color you like.”",
+-    "github_button": True,
++    "github_button": False,
+     "github_user": "ambv",
+     "github_repo": "black",
+     "github_type": "star",
+-    "show_powered_by": True,
++    "show_powered_by": False,
+     "fixed_sidebar": True,
+     "logo": "logo2.png",
+-    "travis_button": True,
++    "travis_button": False,
+ }
+ 
+ 
