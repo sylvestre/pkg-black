@@ -11,7 +11,7 @@ X-Python3-Version: >= 3.5
 
 Package: black
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}
+Depends: python3-pkg-resources, ${python3:Depends}, ${misc:Depends}
 Suggests: python-black-doc
 Description: uncompromising Python code formatter (Python 3)
  Black is the uncompromising Python code formatter. By using it, you 
