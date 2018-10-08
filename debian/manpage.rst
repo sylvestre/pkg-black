@@ -1,9 +1,8 @@
-:Date: 2018-10-08
 :Version: 18.9b0
 :Copyright: 2018 Åukasz Langa
 :Title: black
 :subtitle: uncompromising Python code formatter
-:Manual section: 1
+:Manual section: "1"
 
 Description
 ============
