@@ -1,3 +1,10 @@
+:Date: 2018-10-08
+:Version: 18.9b0
+:Copyright: 2018 Åukasz Langa
+:Title: black
+:subtitle: uncompromising Python code formatter
+:Manual section: 1
+
 Description
 ============
 
@@ -7,9 +14,9 @@ Summary
 #######
 
 ``black`` is the uncompromising Python code formatter. By using it,
-you  agree to cede control over minutiae of hand-formatting. In return, 
-Black gives you speed, determinism, and freedom from pycodestyle 
-nagging about formatting. You will save time and mental energy for 
+you  agree to cede control over minutiae of hand-formatting. In return,
+Black gives you speed, determinism, and freedom from pycodestyle
+nagging about formatting. You will save time and mental energy for
 more important matters.
 
 Usage

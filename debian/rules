@@ -10,9 +10,13 @@ export BUILD_DATE=$(shell LC_ALL=C date -u "+%B %d, %Y" -d @"$(SOURCE_DATE_EPOCH
 # Prevent setuptools/distribute from accessing the internet.
 export http_proxy = http://127.0.9.1:9
 
+export PYBUILD_NAME=black
+export PYBUILD_DISABLE_python3.5=test
+export PYBUILD_DISABLE_python3.6=test
+
 
 %:
-	dh $@ --with sphinxdoc,python3
+	dh $@ --with sphinxdoc,python3 --buildsystem=pybuild
 
 override_dh_auto_build:
 	python3 setup.py build
@@ -21,6 +25,7 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	python3 setup.py install --root=$(CURDIR)/debian/black/ --install-layout=deb
+	rst2man debian/manpage.rst > debian/black.1
 	dh_installman debian/black.1
 	${RM} ./docs/_build/html/objects.inv
 	${RM} ./debian/black/usr/bin/blackd
