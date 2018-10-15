@@ -1,3 +1,10 @@
+black (18.9b0-1-4) unstable; urgency=medium
+
+  * Fix "broken symlink to undercore.js in doc package.
+    (Closes: #911066)
+
+ -- Neil Williams <codehelp@debian.org>  Mon, 15 Oct 2018 13:22:59 +0100
+
 black (18.9b0-1-3) unstable; urgency=medium
 
   * Build manpage each time and update VCS links
