@@ -1,3 +1,9 @@
+black (18.9b0-1-5) unstable; urgency=medium
+
+  * Bump minimum Python3 version to 3.6 (Closes: #912760)
+
+ -- Neil Williams <codehelp@debian.org>  Wed, 07 Nov 2018 17:34:20 +0000
+
 black (18.9b0-1-4) unstable; urgency=medium
 
   * Fix "broken symlink to undercore.js in doc package.
