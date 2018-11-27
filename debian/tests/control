@@ -1,0 +1,5 @@
+Tests: testsuite
+Depends: python3, python3-recommonmark, python3-setuptools,
+ python3-sphinx, python3-docutils,
+ python3-appdirs, python3-attr, python3-click, python3-toml
+Restrictions: allow-stderr, needs-root

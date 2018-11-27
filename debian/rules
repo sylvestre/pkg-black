@@ -11,8 +11,6 @@ export BUILD_DATE=$(shell LC_ALL=C date -u "+%B %d, %Y" -d @"$(SOURCE_DATE_EPOCH
 export http_proxy = http://127.0.9.1:9
 
 export PYBUILD_NAME=black
-export PYBUILD_DISABLE_python3.5=test
-export PYBUILD_DISABLE_python3.6=test
 
 
 %:

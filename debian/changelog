@@ -1,3 +1,9 @@
+black (18.9b0-1-6) unstable; urgency=medium
+
+  * Support for Python3.7 and test dependencies. (Closes: #914552)
+
+ -- Neil Williams <codehelp@debian.org>  Tue, 27 Nov 2018 09:47:06 +0000
+
 black (18.9b0-1-5) unstable; urgency=medium
 
   * Bump minimum Python3 version to 3.6 (Closes: #912760)

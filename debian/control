@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Neil Williams <codehelp@debian.org>
 Build-Depends: debhelper (>= 11), dh-python,
  python3, python3-recommonmark, python3-setuptools,
- python3-sphinx, python3-docutils,
+ python3-appdirs, python3-attr, python3-click,
+ python3-toml, python3-sphinx, python3-docutils,
  libjs-underscore, libjs-jquery
 Standards-Version: 4.2.1
 Homepage: https://github.com/ambv/black
